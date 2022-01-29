@@ -1,6 +1,7 @@
+import prev from './preview.js';
 const url = 'https://api.github.com/users/'
-let search = document.getElementsByClassName('serch')
-let btnsearch = document.getElementById('get')
+var search = document.getElementsByClassName('serch')
+var btnsearch = document.getElementById('get')
 var username = document.getElementById('user')
 btnsearch.addEventListener('click', getuser);
 // getuser()
@@ -38,6 +39,9 @@ function getuser(){
                 erro("not")
             }
         }
-        get().then(data => console.log(data))
+        var datau
+        get().then((data) => {
+            prev()
+        })
     }
 }
