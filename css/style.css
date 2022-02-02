@@ -172,10 +172,10 @@ main {
 
 
 .repos {
-    max-height: 350PX;
+    max-width: 720px;
     overflow-y: scroll;
     scroll-behavior: smooth;
-    padding: 20px 40px;
+    padding: 20px 40px 30px 40px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -210,4 +210,13 @@ main {
 footer {
     padding: 10px;
     border-top: var(--style-border);
+}
+
+#repo0{
+    display: none;
+    margin: auto;
+    background-color: #424242;
+    text-align: center;
+    padding: 10px 10px;
+    border-radius: 10px;
 }
