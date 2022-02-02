@@ -112,12 +112,16 @@ main {
 .infor-user > .cont-photo {
     width: 120px;
     height: 120px;
-    background-color: rgb(66, 66, 66);
+    background-color: var(--back);
+    /* background-size: 100% 100%; */
     border-radius: 50%;
     border: 2px solid white;
     margin-top: -50px;
 }
-
+.infor-user > .cont-photo > img{
+    width: 100%;
+    border-radius: 50%;
+}
 .infor-user > article p{
      margin: 0;
 }
@@ -179,8 +183,10 @@ main {
     /* background-color: blue; */
     margin-bottom: 0px;
 }
-
-.repo div {
+.repos::-webkit-scrollbar{
+    width: 0px;
+}
+.repos div {
     /* max-width: 300px; */
     flex-basis: 300px; 
     background-color: violet;
@@ -188,6 +194,14 @@ main {
     padding: 10px;
 }
 
+.repos > div > .desc{
+    margin: 10px 0;
+}
+
+
+.repo > div .title{
+    background-color: red;
+}
 /* .repos div:last-child{
     background-color: red;
 

@@ -1,6 +1,7 @@
-import prev from './preview.js';
+import {prev} from './preview.js';
 const url = 'https://api.github.com/users/'
-var search = document.getElementsByClassName('serch')
+var search = document.querySelector("body > main > section.search")
+var viewprofile =  document.querySelector("body > main > section.view-profile")
 var btnsearch = document.getElementById('get')
 var username = document.getElementById('user')
 btnsearch.addEventListener('click', getuser);
@@ -39,9 +40,10 @@ function getuser(){
                 erro("not")
             }
         }
-        var datau
         get().then((data) => {
-            prev()
+            prev(data)
+            search.style.display = 'none'
+            viewprofile.style.display = 'block'
         })
     }
 }
