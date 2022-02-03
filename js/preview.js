@@ -12,7 +12,7 @@ const prevrepo = (repos) => {
             rnomef = rnome
         }
         let rurl = repos[r].html_url
-        let star = repos[0].stargazers_count
+        let star = repos[r].stargazers_count
         let drepo = `<div><a class="title" href="${rurl}" target="_blank">${rnomef}</a><aside class="star">&#x2B50; ${star}</aside></div>`
         document.querySelector("body > main > section.view-profile > section.repo > article.repos").innerHTML += drepo
     }
