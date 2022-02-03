@@ -66,6 +66,7 @@ main {
     padding: 5px;
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 .form > button:hover{
@@ -95,8 +96,16 @@ main {
 }
  .view-profile > .banner {
     /* background-color: violet; */
-    width: 100%;
+    /* width: 800px; */
     height: 150px;
+    background-image: url('https://source.unsplash.com/800x150/?galaxy');
+    /* background-size: 800px 150px; */
+    background-position: center center;
+}
+
+.banner > .tblack{
+    height: 100%;
+    background-color: rgba(36, 36, 36, 0.603);
 }
 
 .infor-user{
@@ -173,6 +182,8 @@ main {
 
 .repos {
     max-width: 720px;
+    min-height: 300px;
+    max-height: 400px;
     overflow-y: scroll;
     scroll-behavior: smooth;
     padding: 20px 40px 30px 40px;
@@ -187,36 +198,54 @@ main {
     width: 0px;
 }
 .repos div {
-    /* max-width: 300px; */
+    max-height: 100px;
     flex-basis: 300px; 
-    background-color: violet;
+    background-color: rgb(25, 32, 44);
+    border: var(--style-border);
     border-radius: 10px;
     padding: 10px;
 }
 
-.repos > div > .desc{
-    margin: 10px 0;
+.repos > div > a{
+    text-decoration: none;
+    color: rgb(88, 166, 255);
+    /* font-weight: bold; */
+    font-size: 16px;
+    letter-spacing: 1px;
 }
 
-
-.repo > div .title{
-    background-color: red;
+.repos > div > a:hover{
+    text-decoration: underline;
 }
-/* .repos div:last-child{
-    background-color: red;
 
-} */
-
+.repos > div > .star{
+    padding-top: 15px;
+}
 footer {
+    font-size: 15px;
+    text-align: center;
     padding: 10px;
     border-top: var(--style-border);
+}
+footer > p > a{
+    color: gray;
+    text-decoration: none;
+}
+
+footer > p a:hover{
+    color: white;
 }
 
 #repo0{
     display: none;
     margin: auto;
+    margin-top: 20px;
     background-color: #424242;
     text-align: center;
     padding: 10px 10px;
     border-radius: 10px;
+}
+
+a{
+    cursor: pointer;
 }

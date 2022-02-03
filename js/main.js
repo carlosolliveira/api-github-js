@@ -26,7 +26,7 @@ function erro(p){
         notfound.innerHTML = '<p>Campo vázio</p>'
     }
     notfound.style.display = 'block'
-    setTimeout(() => notfound.style.display = 'none', 5000)
+    setTimeout(() => notfound.style.display = 'none', 3000)
 }
 
 function getuser(){

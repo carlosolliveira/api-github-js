@@ -1,6 +1,20 @@
 const prevrepo = (repos) => {
-    for(r in repos){
-        let nome = r.name
+    var div = document.createElement("div")
+    div.setAttribute("id", "repositorio")
+    var aside = document.createElement("aside")
+    for(let r = 0; r <= repos.length - 1; r++){
+        let rnome = repos[r].name
+        let rnomef
+        if(rnome.length > 28){
+            rnomef = rnome.slice(0, 29) + "..."
+            console.log(rnomef)
+        }else{
+            rnomef = rnome
+        }
+        let rurl = repos[r].html_url
+        let star = repos[0].stargazers_count
+        let drepo = `<div><a class="title" href="${rurl}" target="_blank">${rnomef}</a><aside class="star">&#x2B50; ${star}</aside></div>`
+        document.querySelector("body > main > section.view-profile > section.repo > article.repos").innerHTML += drepo
     }
 }
 
@@ -19,8 +33,6 @@ const prev = (data) => {
     document.querySelector("#folowing > span").innerText = followersu
     document.querySelector("#followers > span").innerText = followingu
     document.querySelector("#qountrepo").innerText = repopublic + " Repositorios"
-    let div = document.createElement('div')
-    let aside = document.createElement('aside')
     const getrepo = async (url) => {
         var reponse = await fetch(url)
         if(reponse.status == 200){
